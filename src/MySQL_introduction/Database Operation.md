@@ -3,7 +3,7 @@
 
 
 #### 使用库
-`use *数据库名*;` 
+`use *数据库名*` 
 ##### 查看当前使用的数据库
 `select database();`
 ##### 显示当前时间，用户名，数据库版本
@@ -20,7 +20,7 @@ COLLATE collation_name*       ---表示应用的COLLATE
 *建议字符集为：utf8mb4*  
     mysql中有utf8和utf8mb4两种编码，在mysql中请大家忘记**utf8**，永远使用**utf8mb4**。  
     这是mysql的一个遗留问题，mysql中的utf8最多只能支持3bytes长度的字符编码，  
-    对于一些需要占据4bytes的文字，mysql的utf8就不支持了，要使用utf8mb4才行。
+    对于一些需要占据4bytes字符编码的文字，mysql的utf8就不支持了，要使用utf8mb4才行。
 
 2. 有关COLLATE  
 *utf8mb4编码的COLLATE 默认值为utf8mb4_general_ci* 
@@ -32,7 +32,7 @@ COLLATE collation_name*       ---表示应用的COLLATE
 #### 查看已有库
 `show databases;`
 #### 查看当前库信息(即创建库时的字符集等信息)；
-`show create databases *数据库名*;`
+`show create database *数据库名*;`
 #### 修改库的选项信息
 `alter database *库名 选项信息*`
 #### 删除库
