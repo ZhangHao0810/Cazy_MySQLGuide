@@ -10,11 +10,11 @@
 `select now(),user(),version();`
 
 #### 创建库
-`create database *数据库名 选项信息1（设置字符集） 选项信息2（设置COLLATE）  *`  
+`create database *数据库名 选项信息1（设置字符集） 选项信息2（设置校对集）  *`  
 选项信息可以不填，有默认值。看配置文件。  
 *设置字符集：  
 CHARACTER SET charset_name    ---表示应用的字符集  
-设置COLLATE：  
+设置校对集COLLATE：  
 COLLATE collation_name*       ---表示应用的COLLATE  
 1. 有关字符集  
 *建议字符集为：utf8mb4*  
@@ -22,7 +22,7 @@ COLLATE collation_name*       ---表示应用的COLLATE
     这是mysql的一个遗留问题，mysql中的utf8最多只能支持3bytes长度的字符编码，  
     对于一些需要占据4bytes字符编码的文字，mysql的utf8就不支持了，要使用utf8mb4才行。
 
-2. 有关COLLATE  
+2. 有关校对集COLLATE  
 *utf8mb4编码的COLLATE 默认值为utf8mb4_general_ci* 
 >CollATE属性决定了数据库sql语句是否区分大小写，默认值是不区分的
 >COLLATE类型来告知mysql如何对字符类型的列进行排序和比较  
