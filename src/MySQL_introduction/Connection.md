@@ -26,7 +26,12 @@ ex:
 `....... `  
 之后就跟在 MySQL Command Line Client 客户端的操作一致了。
 
+  
+  show processlist ----显示那些线程在运行   
+  show variables ----- 显示变量
+  
+## 修改当前账户密码
 
-
-show processlist  ----显示那些线程在运行   
-show variables  ----- 显示变量
+  登录之后  
+  `update mysql.user set password=password('root');`  
+  
